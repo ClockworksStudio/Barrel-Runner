@@ -20,8 +20,16 @@ public class BasicJump : MonoBehaviour
 		rigidbody.AddForce(Vector3.up * jumpSpeed);
 		onGround = false;
 	}
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider other)
 	{
-		onGround = true;
+		Debug.Log ("Trigger: " + other.name);
+		if(other.name == "Ground")
+		{
+			onGround = true;
+		}
+		if(other.name == "Crayon(Clone)")
+		{
+			Debug.Log("You be dead!");
+		}
 	}
 }
