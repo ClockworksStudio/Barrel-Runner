@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicJump : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
 	public float jumpSpeed = 300.0f;
 
 	private bool onGround = true;
+	public bool gameover = false;
 
 	// Update is called once per frame
 	void Update()
@@ -22,14 +23,16 @@ public class BasicJump : MonoBehaviour
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log ("Trigger: " + other.name);
+		Debug.Log ("Player Trigger: " + other.name);
 		if(other.name == "Ground")
 		{
 			onGround = true;
 		}
 		if(other.name == "Crayon(Clone)")
 		{
-			Debug.Log("You be dead!");
+			Destroy(gameObject);
+			GameManager.Instance.gameover = true;
+			//Debug.Log("Player: You be dead!");
 		}
 	}
 }

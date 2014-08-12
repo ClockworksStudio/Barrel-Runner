@@ -112,7 +112,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1027557034
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1294309510
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   - 65: {fileID: 1600451754}
   - 23: {fileID: 1600451753}
   - 54: {fileID: 1600451757}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!54 &1600451757
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  gameover: 0
 --- !u!4 &1716142030
 Transform:
   m_ObjectHideFlags: 0
@@ -445,7 +446,7 @@ GameObject:
   - 54: {fileID: 1892110614}
   - 114: {fileID: 1892110619}
   - 65: {fileID: 1892110620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +518,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!114 &1892110619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 300
+  gameover: 0
 --- !u!65 &1892110620
 BoxCollider:
   m_ObjectHideFlags: 0
