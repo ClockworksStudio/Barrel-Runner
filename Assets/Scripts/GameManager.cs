@@ -48,15 +48,25 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-	
+		if(Input.GetKeyDown("space") && gameover)
+		{
+			RestartGame();
+		}
 	}
 
+	void RestartGame()
+	{
+		score = 0;
+		gameover = false;
+		Application.LoadLevel(Application.loadedLevel);
+	}
 	void OnGUI()
 	{
 		GUILayout.Label("Score: "+score.ToString());
 		if(gameover)
 		{
 			GUILayout.Label("Game Over!");
+			GUILayout.Label("Press Spacebar to continue.");
 		}
 	}
 }
