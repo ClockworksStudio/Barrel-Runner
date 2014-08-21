@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerManager : MonoBehaviour
 {
 	public float jumpSpeed = 300.0f;
-
+	static public bool noDamage = false;
 	private bool onGround = true;
 	public bool gameover = false;
 
@@ -23,15 +23,18 @@ public class PlayerManager : MonoBehaviour
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log ("Player Trigger: " + other.name);
+		//Debug.Log ("Player Trigger: " + other.name);
 		if(other.name == "Ground")
 		{
 			onGround = true;
 		}
 		if(other.name == "Crayon(Clone)")
 		{
-			Destroy(gameObject);
-			GameManager.Instance.gameover = true;
+			if(!noDamage)
+			{
+				Destroy(gameObject);
+				GameManager.Instance.gameover = true;
+			}
 			//Debug.Log("Player: You be dead!");
 		}
 	}
