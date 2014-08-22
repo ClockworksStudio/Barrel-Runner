@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 //			}
 //		}
 	}
+	public string menuLevel;
 
 	private static GameManager _instance;
 
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if(Input.GetKeyDown("space") && gameover)
+		if(Input.anyKeyDown && gameover)
 		{
 			RestartGame();
 		}
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour
 	{
 		score = 0;
 		gameover = false;
-		Application.LoadLevel(Application.loadedLevel);
+		Application.LoadLevel(menuLevel);
 	}
 	void OnGUI()
 	{
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour
 		if(gameover)
 		{
 			GUILayout.Label("Game Over!");
-			GUILayout.Label("Press Spacebar to continue.");
+			GUILayout.Label("Touch anywhere or press any key to continue.");
 		}
 	}
 }

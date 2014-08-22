@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf91ebccf8fb2e447a55b2396574913c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuLevel: Menu
   score: 0
   gameover: 0
 --- !u!4 &1716142030
