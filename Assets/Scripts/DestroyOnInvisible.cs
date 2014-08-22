@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyOnInvisible : MonoBehaviour {
-
-	// Use this for initialization
+public class DestroyOnInvisible : MonoBehaviour
+{
 	void OnBecameInvisible()
 	{
 		if(!GameManager.Instance.gameover)
 		{
-			GameManager.Instance.score += 10;
+			GameManager.Instance.addScore();
 		}
 		Destroy(gameObject);
 	}

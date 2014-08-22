@@ -10,6 +10,9 @@ public class PowerupScript : MonoBehaviour
 	public int duration = 1;
 	public int coolDown = 2;
 
+	public AudioSource activateSound;
+	public AudioSource deactivateSound;
+
 	private bool activated = false;
 	private int durationTimer = 0;
 	private int coolDownTimer = 0;
@@ -61,6 +64,7 @@ public class PowerupScript : MonoBehaviour
 	void Activate()
 	{
 		deactivated = false;
+		activateSound.Play();
 		Debug.Log("Activated");
 		if(powerupType == powerupList.NoDamage)
 		{
@@ -80,6 +84,7 @@ public class PowerupScript : MonoBehaviour
 	void Deactivate()
 	{
 		deactivated = true;
+		deactivateSound.Play();
 		Debug.Log("Deactivated");
 		if(powerupType == powerupList.NoDamage)
 		{

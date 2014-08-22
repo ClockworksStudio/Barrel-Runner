@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerManager : MonoBehaviour
 {
+	public GameObject explosion;
 	public float jumpSpeed = 300.0f;
 	static public bool noDamage = false;
 	private bool onGround = true;
@@ -31,6 +32,7 @@ public class PlayerManager : MonoBehaviour
 		{
 			if(!noDamage)
 			{
+				Instantiate(explosion, transform.position, Quaternion.identity);
 				Destroy(gameObject);
 				GameManager.Instance.gameover = true;
 			}

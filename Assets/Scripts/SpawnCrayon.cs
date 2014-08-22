@@ -19,7 +19,10 @@ public class SpawnCrayon : MonoBehaviour {
 	
 	void Spawn()
 	{
-		Instantiate(crayonObject, transform.position + new Vector3(Random.Range(minHorizontal,maxHorizontal),Random.Range(minVertical,maxVertical)), Quaternion.identity);
-		Invoke ("Spawn", Random.Range(minSpawnTime, maxSpawnTime));
+		if(!GameManager.Instance.gameover)
+		{
+			Instantiate(crayonObject, transform.position + new Vector3(Random.Range(minHorizontal,maxHorizontal),Random.Range(minVertical,maxVertical)), Quaternion.identity);
+			Invoke ("Spawn", Random.Range(minSpawnTime, maxSpawnTime));
+		}
 	}
 }

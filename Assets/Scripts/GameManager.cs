@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 //		}
 	}
 	public string menuLevel;
+	public AudioSource scoreSound;
+
 
 	private static GameManager _instance;
 
@@ -54,7 +56,11 @@ public class GameManager : MonoBehaviour
 			RestartGame();
 		}
 	}
-
+	public void addScore()
+	{
+		audio.Play();
+		score += 10;
+	}
 	void RestartGame()
 	{
 		score = 0;
