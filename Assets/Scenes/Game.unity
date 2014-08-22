@@ -346,7 +346,7 @@ MonoBehaviour:
   minHorizontal: 0
   maxHorizontal: 0
   minVertical: 0
-  maxVertical: .699999988
+  maxVertical: .600000024
   minSpawnTime: 2
   maxSpawnTime: 4
 --- !u!4 &1472131621
