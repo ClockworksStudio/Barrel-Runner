@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
 
 	private static GameManager _instance;
 
+	[HideInInspector]
 	public int score = 0;
-
 	[HideInInspector]
 	public bool gameover = false;
 

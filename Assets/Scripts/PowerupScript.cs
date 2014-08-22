@@ -3,21 +3,19 @@ using System.Collections;
 
 public class PowerupScript : MonoBehaviour
 {
-	public enum powerupList 
-	{
-		NoDamage, SpeedBooster, JumpBooster
-	}
+	public enum powerupList {NoDamage, SpeedBooster, JumpBooster}
 	public powerupList powerupType;
 	public float speedBoost = 1.0f;
 	public float jumpBoost = 1.0f;
 	public int duration = 1;
 	public int coolDown = 2;
 
-	public bool activated = false;
-	public int durationTimer = 0;
-	public int coolDownTimer = 0;
-	public bool running = false;
-	public float timer = 0;
+	private bool activated = false;
+	private int durationTimer = 0;
+	private int coolDownTimer = 0;
+	private bool running = false;
+	private float timer = 0;
+	private bool deactivated = true;
 
 	void Start()
 	{
@@ -41,7 +39,7 @@ public class PowerupScript : MonoBehaviour
 		{
 			timer += Time.deltaTime;
 		}
-		if(durationTimer == duration && running)
+		if(durationTimer == duration && running && !deactivated)
 		{
 			Deactivate();
 		}
@@ -62,6 +60,7 @@ public class PowerupScript : MonoBehaviour
 	}
 	void Activate()
 	{
+		deactivated = false;
 		Debug.Log("Activated");
 		if(powerupType == powerupList.NoDamage)
 		{
@@ -80,6 +79,7 @@ public class PowerupScript : MonoBehaviour
 	}
 	void Deactivate()
 	{
+		deactivated = true;
 		Debug.Log("Deactivated");
 		if(powerupType == powerupList.NoDamage)
 		{
@@ -94,6 +94,14 @@ public class PowerupScript : MonoBehaviour
 		else
 		{
 			Debug.LogError("Powerup type not defined on object '"+gameObject.name+"'", gameObject);
+		}
+	}
+	void Touched()
+	{
+		if (!running && coolDownTimer == coolDown)
+		{
+			Debug.Log("Touch detected on: "+gameObject.name, gameObject);
+			activated = true;
 		}
 	}
 }

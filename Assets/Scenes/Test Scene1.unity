@@ -74,46 +74,6 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!1 &414643682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 414643684}
-  - 65: {fileID: 414643683}
-  m_Layer: 0
-  m_Name: 'Powerup #1 Trigger'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &414643683
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 414643682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &414643684
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 414643682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.09522104, y: -2.70308375, z: -40.5538635}
-  m_LocalScale: {x: .610000014, y: .579999983, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1960956664}
-  m_RootOrder: 0
 --- !u!1 &485804794
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,6 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01dc5bb6b2d6a964494ec8f68c41a6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchableLayers:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!4 &485804796
 Transform:
   m_ObjectHideFlags: 0
@@ -246,7 +209,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1228259184}
   - 65: {fileID: 1228259183}
-  m_Layer: 0
+  - 114: {fileID: 1228259185}
+  m_Layer: 11
   m_Name: Jump Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,10 +237,21 @@ Transform:
   m_GameObject: {fileID: 1228259182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 1, y: 5.28000021, z: 1}
+  m_LocalScale: {x: 1.5, y: 5.28000021, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &1228259185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228259182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f753f94b95e5e2c4ba3861b5a29aec4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1294309510
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +455,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1716142030}
   - 114: {fileID: 1716142029}
+  - 114: {fileID: 1716142031}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -512,6 +488,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1716142031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1716142028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c777665141ea0478180a4a0ece49eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpPressed: 0
 --- !u!1 &1892110613
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +599,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 300
-  gameover: 0
 --- !u!65 &1892110620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -636,7 +623,7 @@ GameObject:
   - 65: {fileID: 1960956662}
   - 23: {fileID: 1960956661}
   - 114: {fileID: 1960956660}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 'Powerup Button #1'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,12 +645,7 @@ MonoBehaviour:
   speedBoost: 0
   jumpBoost: 0
   duration: 10
-  coolDown: 11
-  activated: 0
-  durationTimer: 0
-  coolDownTimer: 0
-  running: 0
-  timer: 0
+  coolDown: 20
 --- !u!23 &1960956661
 Renderer:
   m_ObjectHideFlags: 0
@@ -691,7 +673,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1960956659}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -710,9 +692,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1960956659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.84459162, y: 4.25811434, z: 8.5}
-  m_LocalScale: {x: .899999976, y: .75, z: .100000001}
-  m_Children:
-  - {fileID: 414643684}
+  m_LocalPosition: {x: -2.98006296, y: 2.15158844, z: 4.35594654}
+  m_LocalScale: {x: .5, y: .5, z: .100000001}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7

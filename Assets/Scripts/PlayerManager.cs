@@ -6,12 +6,11 @@ public class PlayerManager : MonoBehaviour
 	public float jumpSpeed = 300.0f;
 	static public bool noDamage = false;
 	private bool onGround = true;
-	public bool gameover = false;
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
+		if((Input.GetKeyDown("space") || PseudoInput.Instance.jumpPressed) && onGround == true)
 		{
 			Jump();
 		}
