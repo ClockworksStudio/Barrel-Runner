@@ -34,6 +34,7 @@ public class PlayerManager : MonoBehaviour
 			{
 				Instantiate(explosion, transform.position, Quaternion.identity);
 				Destroy(gameObject);
+				Destroy(other.gameObject);
 				GameManager.Instance.gameover = true;
 			}
 			//Debug.Log("Player: You be dead!");

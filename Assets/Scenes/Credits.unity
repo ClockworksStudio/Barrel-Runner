@@ -211,7 +211,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 649636094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 9.58865929}
+  m_LocalPosition: {x: -1.5, y: -10, z: 9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1088644741}
@@ -228,9 +228,9 @@ Animation:
   m_GameObject: {fileID: 649636094}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: bd15ff06a2b6db9458f85286d92547e9, type: 2}
+  m_Animation: {fileID: 7400000, guid: df2d5f4c18e41664f9e1a250a570fe69, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: bd15ff06a2b6db9458f85286d92547e9, type: 2}
+  - {fileID: 7400000, guid: df2d5f4c18e41664f9e1a250a570fe69, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -261,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 763214313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9000001, y: -2.5, z: 5}
+  m_LocalPosition: {x: 2.9000001, y: -2.5, z: 5}
   m_LocalScale: {x: 1.5, y: .5, z: .200000003}
   m_Children:
   - {fileID: 1569876861}
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 3
   gameLevel: Game
-  optionsLevel: 
+  highscoresLevel: 
   creditsLevel: 
   menuLevel: Menu
 --- !u!23 &763214316

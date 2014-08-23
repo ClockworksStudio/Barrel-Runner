@@ -3,11 +3,11 @@ using System.Collections;
 
 public class ButtonScript : MonoBehaviour
 {
-	public enum ButtonType{Play, Options, Credits, Menu, Quit}
+	public enum ButtonType{Play, Highscores, Credits, Menu, Quit}
 	public ButtonType buttonType;
 
 	public string gameLevel;
-	public string optionsLevel;
+	public string highscoresLevel;
 	public string creditsLevel;
 	public string menuLevel;
 
@@ -17,9 +17,9 @@ public class ButtonScript : MonoBehaviour
 		{
 			Application.LoadLevel(gameLevel);
 		}
-		else if(buttonType == ButtonType.Options)
+		else if(buttonType == ButtonType.Highscores)
 		{
-			Application.LoadLevel(optionsLevel);
+			Application.LoadLevel(highscoresLevel);
 		}
 		else if(buttonType == ButtonType.Credits)
 		{
