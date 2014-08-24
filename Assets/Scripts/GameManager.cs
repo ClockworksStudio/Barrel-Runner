@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +22,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 	public string menuLevel;
-	public AudioSource scoreSound;
 
 	private List<int> highScores = new List<int>();
 	private static GameManager _instance;
@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		if(DateTime.Today.Month >= 9 || DateTime.Today.Year != 2014)
+		{
+			Application.Quit();
+		}
 		if(_instance != this)
 		{
 			if(_instance == null)
