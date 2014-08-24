@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerManagerV2 : MonoBehaviour
 {
+	public List<string> deathList = new List<string>();
 	public Animator animator;
 	public GameObject explosion;
 	static public bool noDamage = false;
@@ -34,23 +36,28 @@ public class PlayerManagerV2 : MonoBehaviour
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Collision!");
+		Debug.Log("Collision with: "+other.name);
 		//Debug.Log ("Player Trigger: " + other.name);
 		if(other.name == "Ground")
 		{
 
 		}
-		if(other.name == "Crayon(Clone)")
+		foreach(string str in deathList)
 		{
-			if(!noDamage)
+			if(other.name == str)
 			{
-				if(onGround)
+
+				if(!noDamage)
 				{
-					Instantiate(explosion, transform.position, Quaternion.identity);
-					Destroy(gameObject);
-					Destroy(other.gameObject);
-					GameManager.Instance.gameover = true;
+					if(onGround)
+					{
+						Instantiate(explosion, transform.position, Quaternion.identity);
+						Destroy(gameObject);
+						Destroy(other.gameObject);
+						GameManager.Instance.gameover = true;
+					}
 				}
+				break;
 			}
 			//Debug.Log("Player: You be dead!");
 		}

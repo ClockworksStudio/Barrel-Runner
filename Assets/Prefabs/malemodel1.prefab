@@ -1217,6 +1217,7 @@ GameObject:
   - 95: {fileID: 9500000}
   - 114: {fileID: 11400000}
   - 65: {fileID: 6500002}
+  - 54: {fileID: 5400000}
   m_Layer: 8
   m_Name: malemodel1
   m_TagString: Untagged
@@ -2276,6 +2277,21 @@ Transform:
   - {fileID: 400146}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100160}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6500002
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2314,6 +2330,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9dd4dd4cc206284faf900ba87ea8578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathList:
+  - Barrel01
+  - Barrel02
+  - Barrel03
   animator: {fileID: 9500000}
   explosion: {fileID: 100000, guid: 2a20b605def4fad45a89e520ca367972, type: 2}
   onGround: 1
