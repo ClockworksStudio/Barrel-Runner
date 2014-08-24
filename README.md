@@ -14,4 +14,4 @@ Copy any material and/or code.
 Destribute any material and/or code.  
 Use the product for commercial use.  
 
-PFUDOR The Game ©2014 Clockworks Studio
+Barrel Runner ©2014 Clockworks Studio
