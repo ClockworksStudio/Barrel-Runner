@@ -53,7 +53,7 @@ public class PlayerManagerV2 : MonoBehaviour
 					{
 						Instantiate(explosion, transform.position, Quaternion.identity);
 						Destroy(gameObject);
-						Destroy(other.gameObject);
+						Destroy(other.transform.parent.gameObject);
 						GameManager.Instance.gameover = true;
 					}
 				}

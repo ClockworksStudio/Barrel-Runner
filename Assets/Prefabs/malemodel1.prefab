@@ -2265,7 +2265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100160}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -4.5, y: -3.08691621, z: 6.94837713}
+  m_LocalPosition: {x: -3.5, y: -3.08691621, z: 6.94837713}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 400158}
@@ -2333,7 +2333,7 @@ MonoBehaviour:
   deathList:
   - Barrel01
   - Barrel02
-  - Barrel03
+  - Barrel03(Clone)
   animator: {fileID: 9500000}
   explosion: {fileID: 100000, guid: 2a20b605def4fad45a89e520ca367972, type: 2}
   onGround: 1
