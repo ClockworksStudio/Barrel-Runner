@@ -395,7 +395,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_index.01.L
+    - boneName: malemodel1|thumb.01.L
       humanName: Left Thumb Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -403,7 +403,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_index.02.L
+    - boneName: malemodel1|thumb.02.L
       humanName: Left Thumb Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -411,7 +411,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_index.03.L
+    - boneName: malemodel1|thumb.03.L
       humanName: Left Thumb Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -419,7 +419,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_middle.01.L
+    - boneName: malemodel1|f_index.01.L
       humanName: Left Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -427,7 +427,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_middle.02.L
+    - boneName: malemodel1|f_index.02.L
       humanName: Left Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -435,7 +435,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_middle.03.L
+    - boneName: malemodel1|f_index.03.L
       humanName: Left Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -443,7 +443,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|thumb.01.L
+    - boneName: malemodel1|f_middle.01.L
       humanName: Left Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -451,7 +451,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|thumb.02.L
+    - boneName: malemodel1|f_middle.02.L
       humanName: Left Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -459,7 +459,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|thumb.03.L
+    - boneName: malemodel1|f_middle.03.L
       humanName: Left Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -467,7 +467,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_pinky.01.L
+    - boneName: malemodel1|f_ring.01.L
       humanName: Left Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -475,7 +475,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_pinky.02.L
+    - boneName: malemodel1|f_ring.02.L
       humanName: Left Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -483,7 +483,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_pinky.03.L
+    - boneName: malemodel1|f_ring.03.L
       humanName: Left Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -491,7 +491,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_ring.01.L
+    - boneName: malemodel1|f_pinky.01.L
       humanName: Left Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -499,7 +499,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_ring.02.L
+    - boneName: malemodel1|f_pinky.02.L
       humanName: Left Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -507,7 +507,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_ring.03.L
+    - boneName: malemodel1|f_pinky.03.L
       humanName: Left Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -515,7 +515,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_index.01.R
+    - boneName: malemodel1|thumb.01.R
       humanName: Right Thumb Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -523,7 +523,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_index.02.R
+    - boneName: malemodel1|thumb.02.R
       humanName: Right Thumb Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -531,7 +531,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_index.03.R
+    - boneName: malemodel1|thumb.03.R
       humanName: Right Thumb Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -539,7 +539,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_middle.01.R
+    - boneName: malemodel1|f_index.01.R
       humanName: Right Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -547,7 +547,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_middle.02.R
+    - boneName: malemodel1|f_index.02.R
       humanName: Right Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -555,7 +555,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_middle.03.R
+    - boneName: malemodel1|f_index.03.R
       humanName: Right Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -563,7 +563,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|thumb.01.R
+    - boneName: malemodel1|f_middle.01.R
       humanName: Right Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -571,7 +571,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|thumb.02.R
+    - boneName: malemodel1|f_middle.02.R
       humanName: Right Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -579,7 +579,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|thumb.03.R
+    - boneName: malemodel1|f_middle.03.R
       humanName: Right Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -587,7 +587,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_pinky.01.R
+    - boneName: malemodel1|f_ring.01.R
       humanName: Right Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -595,7 +595,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_pinky.02.R
+    - boneName: malemodel1|f_ring.02.R
       humanName: Right Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -603,7 +603,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_pinky.03.R
+    - boneName: malemodel1|f_ring.03.R
       humanName: Right Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -611,7 +611,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_ring.01.R
+    - boneName: malemodel1|f_pinky.01.R
       humanName: Right Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -619,7 +619,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_ring.02.R
+    - boneName: malemodel1|f_pinky.02.R
       humanName: Right Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -627,7 +627,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: malemodel1|f_ring.03.R
+    - boneName: malemodel1|f_pinky.03.R
       humanName: Right Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -723,7 +723,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|upper_arm.R
       position: {x: 2.01165676e-07, y: .403112173, z: -1.34110451e-07}
-      rotation: {x: .379374683, y: .802656114, z: -.03509425, w: .458896846}
+      rotation: {x: .379374713, y: .802656174, z: -.0350942537, w: .458896875}
       scale: {x: .99999994, y: .999999642, z: .99999994}
       transformModified: 1
     - name: malemodel1|forearm.R
@@ -743,7 +743,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_pinky.01.R
       position: {x: 1.1920929e-07, y: .279376328, z: -1.93715096e-07}
-      rotation: {x: .0292550679, y: -.066261597, z: .386761785, w: .919330716}
+      rotation: {x: .0317832232, y: -.0640746653, z: .242212027, w: .967583418}
       scale: {x: 1.00000024, y: 1.00000024, z: 1.00000036}
       transformModified: 1
     - name: malemodel1|f_pinky.02.R
@@ -763,7 +763,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_middle.01.R
       position: {x: -5.36441803e-07, y: .36944288, z: 3.53902578e-07}
-      rotation: {x: .03840518, y: -.0270137191, z: .210241958, w: .976521254}
+      rotation: {x: .0115352022, y: -.0278913416, z: .0710660741, w: .99701488}
       scale: {x: .999999762, y: .999999821, z: 1.00000012}
       transformModified: 1
     - name: malemodel1|f_middle.02.R
@@ -783,7 +783,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_ring.01.R
       position: {x: 1.78813934e-07, y: .329374671, z: -6.70552254e-08}
-      rotation: {x: .0685412139, y: -.0566218607, z: .259663582, w: .961598098}
+      rotation: {x: .0515689068, y: -.0527177341, z: .116797596, w: .990414023}
       scale: {x: .999999821, y: .999999762, z: .99999994}
       transformModified: 1
     - name: malemodel1|f_ring.02.R
@@ -798,12 +798,12 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|thumb.01.R
       position: {x: -.131082118, y: .208590388, z: -.00748807192}
-      rotation: {x: -.101751409, y: .495884329, z: .271004945, w: .818719566}
+      rotation: {x: -.107066967, y: .493953705, z: .276957005, w: .817215562}
       scale: {x: .999999881, y: 1, z: 1}
       transformModified: 1
     - name: malemodel1|thumb.02.R
       position: {x: -0, y: .172218978, z: 4.76837158e-07}
-      rotation: {x: .00687531894, y: .143801108, z: -.0328349508, w: .989037812}
+      rotation: {x: .00687531941, y: .143801123, z: -.0328349546, w: .989037871}
       scale: {x: .999999881, y: 1, z: .999999881}
       transformModified: 1
     - name: malemodel1|thumb.03.R
@@ -818,7 +818,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_index.01.R
       position: {x: 1.1920929e-07, y: .395325184, z: -1.1920929e-07}
-      rotation: {x: -.0367020965, y: -.0431066304, z: .493658066, w: .867811322}
+      rotation: {x: .0310735386, y: -.0338031091, z: -.0451028571, w: .997926652}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: malemodel1|f_index.02.R
@@ -863,7 +863,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_pinky.01.L
       position: {x: 1.1920929e-07, y: .283667862, z: 5.96046448e-08}
-      rotation: {x: .0161615852, y: .0654113814, z: -.406841874, w: .911010385}
+      rotation: {x: .0187791362, y: .0653785244, z: -.263328195, w: .962305248}
       scale: {x: 1, y: .99999994, z: .99999994}
       transformModified: 1
     - name: malemodel1|f_pinky.02.L
@@ -883,7 +883,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_index.01.L
       position: {x: -1.1920929e-07, y: .395325184, z: -1.1920929e-07}
-      rotation: {x: -.0367016792, y: .04310669, z: -.493658096, w: .867811322}
+      rotation: {x: .0310741719, y: .0338031463, z: .0451028086, w: .997926652}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: malemodel1|f_index.02.L
@@ -903,7 +903,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_ring.01.L
       position: {x: 4.17232513e-07, y: .331296504, z: -1.78813934e-07}
-      rotation: {x: .0661991239, y: .0451028049, z: -.281402946, w: .956240416}
+      rotation: {x: .0477270447, y: .0422123894, z: -.139368981, w: .988188565}
       scale: {x: .999999881, y: 1, z: 1.00000024}
       transformModified: 1
     - name: malemodel1|f_ring.02.L
@@ -923,7 +923,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|f_middle.01.L
       position: {x: 5.36441803e-07, y: .36944288, z: 3.53902578e-07}
-      rotation: {x: .0384056158, y: .0270140506, z: -.210241288, w: .976521313}
+      rotation: {x: .0115358559, y: .0278917197, z: -.0710656717, w: .99701488}
       scale: {x: .999999762, y: .999999821, z: 1.00000012}
       transformModified: 1
     - name: malemodel1|f_middle.02.L
@@ -938,7 +938,7 @@ ModelImporter:
       transformModified: 1
     - name: malemodel1|thumb.01.L
       position: {x: .131082118, y: .208590388, z: -.00748807192}
-      rotation: {x: -.101894595, y: -.496326566, z: -.270949155, w: .818452239}
+      rotation: {x: -.107213184, y: -.494395077, z: -.276897967, w: .816949368}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: malemodel1|thumb.02.L
