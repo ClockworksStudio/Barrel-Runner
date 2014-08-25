@@ -36,30 +36,19 @@ public class PlayerManagerV2 : MonoBehaviour
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Collision with: "+other.name);
-		//Debug.Log ("Player Trigger: " + other.name);
-		if(other.name == "Ground")
-		{
-
-		}
 		foreach(string str in deathList)
 		{
 			if(other.name == str)
 			{
-
 				if(!noDamage)
 				{
-					if(onGround)
-					{
-						Instantiate(explosion, transform.position, Quaternion.identity);
-						Destroy(gameObject);
-						Destroy(other.transform.parent.gameObject);
-						GameManager.Instance.gameover = true;
-					}
+					Instantiate(explosion, transform.position, Quaternion.identity);
+					Destroy(gameObject);
+					Destroy(other.transform.parent.gameObject);
+					GameManager.Instance.gameover = true;
 				}
 				break;
 			}
-			//Debug.Log("Player: You be dead!");
 		}
 	}
 }

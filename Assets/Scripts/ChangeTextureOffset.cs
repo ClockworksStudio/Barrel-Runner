@@ -8,6 +8,9 @@ public class ChangeTextureOffset : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		renderer.material.mainTextureOffset += Vector2.right*speed*Time.deltaTime;
+		if(!GameManager.Instance.gameover)
+		{
+			renderer.material.mainTextureOffset += Vector2.right*speed*Time.deltaTime;
+		}
 	}
 }

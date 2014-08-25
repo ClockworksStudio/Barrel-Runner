@@ -7,16 +7,7 @@ public class PseudoInput : MonoBehaviour
 	{
 		get
 		{
-			if(_instance != null)
-			{
-				return _instance;
-			}
-			else
-			{
-				GameObject gameManager = new GameObject("PseudoInput");
-				_instance = gameManager.AddComponent<PseudoInput>();
-				return _instance;
-			}
+			return _instance;
 		}
 	}
 	
@@ -24,7 +15,23 @@ public class PseudoInput : MonoBehaviour
 
 	[HideInInspector]
 	public bool jumpPressed = false;
-	
+
+	void Start()
+	{
+		if(_instance != this)
+		{
+			if(_instance == null)
+			{
+				_instance = this;
+			}
+			else
+			{
+				Destroy(gameObject);
+			}
+		}
+		DontDestroyOnLoad(gameObject);
+	}
+
 	// Update is called once per frame
 	void LateUpdate()
 	{

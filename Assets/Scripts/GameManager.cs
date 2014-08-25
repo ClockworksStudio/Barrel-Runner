@@ -9,16 +9,7 @@ public class GameManager : MonoBehaviour
 	{
 		get
 		{
-			if(_instance != null)
-			{
-				return _instance;
-			}
-			else
-			{
-				GameObject gameManager = new GameObject("GameManager");
-				_instance = gameManager.AddComponent<GameManager>();
-				return _instance;
-			}
+			return _instance;
 		}
 	}
 	public string menuLevel;

@@ -45,8 +45,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
-  - 54: {fileID: 5400000}
   - 114: {fileID: 11400006}
+  - 54: {fileID: 5400000}
   - 23: {fileID: 2300004}
   m_Layer: 9
   m_Name: Barrels
@@ -61,8 +61,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -.667800426, y: .232470602, z: .232470587, w: .667800486}
-  m_LocalPosition: {x: -.541619062, y: .841204166, z: .402856469}
+  m_LocalRotation: {x: -.667977631, y: .231961012, z: .231961012, w: .667977631}
+  m_LocalPosition: {x: -.5, y: .800000012, z: .400000006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -87,9 +87,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: -.552507222, y: .441288739, z: .441288769, w: .552507222}
-  m_LocalPosition: {x: .0846755803, y: .841204166, z: -.667870998}
-  m_LocalScale: {x: .99999994, y: 1, z: 1}
+  m_LocalRotation: {x: -.553387523, y: .440184325, z: .440184325, w: .553387523}
+  m_LocalPosition: {x: 0, y: .800000012, z: -.600000024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
   m_RootOrder: 0

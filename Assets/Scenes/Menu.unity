@@ -510,7 +510,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 843587981}
   - 114: {fileID: 843587980}
-  - 114: {fileID: 843587979}
   - 82: {fileID: 843587978}
   m_Layer: 0
   m_Name: Game Manager
@@ -577,18 +576,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &843587979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 843587977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7c777665141ea0478180a4a0ece49eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpPressed: 0
 --- !u!114 &843587980
 MonoBehaviour:
   m_ObjectHideFlags: 0
