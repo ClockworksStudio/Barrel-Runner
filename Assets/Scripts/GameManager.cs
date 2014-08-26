@@ -94,16 +94,15 @@ public class GameManager : MonoBehaviour
 		gameover = false;
 		Application.LoadLevel(menuLevelNumber);
 	}
-	void OnGUI()
-	{
-		GUILayout.Label("Score: "+((int)score).ToString());
-		if(gameover)
-		{
-			GUILayout.Label("Game Over!");
-			GUILayout.Label("Touch anywhere or press any key to continue.");
-		}
-	}
-
+//	void OnGUI()
+//	{
+//		GUILayout.Label("Score: "+((int)score).ToString());
+//		if(gameover)
+//		{
+//			GUILayout.Label("Game Over!");
+//			GUILayout.Label("Touch anywhere or press any key to continue.");
+//		}
+//	}
 	void SaveHighScore()
 	{
 		int highSlot = -1;
