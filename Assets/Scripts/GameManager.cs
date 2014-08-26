@@ -12,14 +12,20 @@ public class GameManager : MonoBehaviour
 			return _instance;
 		}
 	}
-	public string menuLevel;
+	public List<string> levelList = new List<string>();
+	public int menuLevelNumber;
+	public int creditsLevelNumber;
+	public int scoreMultiplier = 1;
+
+	public AudioSource creditsMusic;
+	public AudioSource gameMusic;
 
 	private List<int> highScores = new List<int>();
 	private static GameManager _instance;
 	public static float highScore = 0.0f;
 
 	[HideInInspector]
-	public int score = 0;
+	public float score = 0;
 	[HideInInspector]
 	public bool gameover = false;
 
@@ -42,11 +48,26 @@ public class GameManager : MonoBehaviour
 			}
 		}
 		DontDestroyOnLoad(gameObject);
+		gameMusic.Play();
 		highScores.Capacity = 5;
 		LoadHighScore();
 	}
-
-	
+	void OnLevelWasLoaded(int level)
+	{
+		if (level == creditsLevelNumber)
+		{
+			gameMusic.Stop();
+			creditsMusic.Play();
+		}
+		if (level == menuLevelNumber)
+		{
+			if(!gameMusic.isPlaying)
+			{
+				creditsMusic.Stop();
+				gameMusic.Play();
+			}
+		}
+	}
 	// Update is called once per frame
 	void Update()
 	{
@@ -54,22 +75,28 @@ public class GameManager : MonoBehaviour
 		{
 			RestartGame();
 		}
-	}
-	public void addScore()
-	{
-		audio.Play();
-		score += 10;
+		foreach(string str in levelList)
+		{
+			if(Application.loadedLevelName == str)
+			{
+				if(!gameover)
+				{
+					score += Time.deltaTime*scoreMultiplier;
+				}
+				break;
+			}
+		}
 	}
 	void RestartGame()
 	{
 		SaveHighScore();
 		score = 0;
 		gameover = false;
-		Application.LoadLevel(menuLevel);
+		Application.LoadLevel(menuLevelNumber);
 	}
 	void OnGUI()
 	{
-		GUILayout.Label("Score: "+score.ToString());
+		GUILayout.Label("Score: "+((int)score).ToString());
 		if(gameover)
 		{
 			GUILayout.Label("Game Over!");
@@ -109,7 +136,6 @@ public class GameManager : MonoBehaviour
 		
 		PlayerPrefs.Save();
 	}
-	
 	void LoadHighScore()
 	{
 		highScores.Clear();
