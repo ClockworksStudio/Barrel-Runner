@@ -16,10 +16,14 @@ public class GameManager : MonoBehaviour
 	public int menuLevelNumber;
 	public int creditsLevelNumber;
 	public int scoreMultiplier = 1;
+	public float musicVolume = 0.5f;
+	public float soundVolume = 1.0f;
 
 	public AudioSource creditsMusic;
 	public AudioSource gameMusic;
 
+	private bool musicToggle = true;
+	private string musicToggleText = "Disable Music";
 	private List<int> highScores = new List<int>();
 	private static GameManager _instance;
 	public static float highScore = 0.0f;
@@ -94,15 +98,25 @@ public class GameManager : MonoBehaviour
 		gameover = false;
 		Application.LoadLevel(menuLevelNumber);
 	}
-//	void OnGUI()
-//	{
-//		GUILayout.Label("Score: "+((int)score).ToString());
-//		if(gameover)
-//		{
-//			GUILayout.Label("Game Over!");
-//			GUILayout.Label("Touch anywhere or press any key to continue.");
-//		}
-//	}
+	void OnGUI() {
+
+		if(musicToggle)
+		{
+			gameMusic.volume = musicVolume;
+			creditsMusic.volume = musicVolume;
+			musicToggleText = "Disable Music";
+		}
+		else
+		{
+			gameMusic.volume = 0;
+			creditsMusic.volume = 0;
+			musicToggleText = "Enable Music";
+		}
+		musicToggle = GUI.Toggle(new Rect(500, 150, 300, 30), musicToggle, musicToggleText);
+
+		musicVolume = GUI.HorizontalSlider(new Rect(500, 200, 300, 30), musicVolume, 0.0f, 1.0f);
+		GUI.Label(new Rect(590, 180, 300, 30),"Music Volume: "+(int)(musicVolume*100)+"%");
+	}
 	void SaveHighScore()
 	{
 		int highSlot = -1;

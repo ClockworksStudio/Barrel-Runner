@@ -841,11 +841,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410298605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8703227, y: 3.96907711, z: -20.4887314}
+  m_LocalPosition: {x: .719936848, y: .351588488, z: .355947495}
   m_LocalScale: {x: .5, y: .5, z: .100000001}
   m_Children: []
-  m_Father: {fileID: 691401120}
-  m_RootOrder: 1
+  m_Father: {fileID: 1527410064}
+  m_RootOrder: 2
 --- !u!82 &410298607
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1141,8 +1141,6 @@ Transform:
   m_LocalPosition: {x: -1.10974026, y: -1.81748867, z: 24.8446789}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1410971855}
-  - {fileID: 410298606}
   - {fileID: 733141219}
   - {fileID: 2047954640}
   m_Father: {fileID: 0}
@@ -1185,7 +1183,7 @@ Transform:
   m_LocalScale: {x: .5, y: .5, z: .100000001}
   m_Children: []
   m_Father: {fileID: 691401120}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!82 &733141220
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2779,11 +2777,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1410971853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8703227, y: 3.96907711, z: -20.4887314}
+  m_LocalPosition: {x: .719936848, y: .351588488, z: .355947495}
   m_LocalScale: {x: .5, y: .5, z: .100000001}
   m_Children: []
-  m_Father: {fileID: 691401120}
-  m_RootOrder: 0
+  m_Father: {fileID: 1527410064}
+  m_RootOrder: 1
 --- !u!1 &1411439495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3051,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1960956664}
+  - {fileID: 1410971855}
+  - {fileID: 410298606}
   m_Father: {fileID: 863064621}
   m_RootOrder: 1
 --- !u!1 &1538820762
@@ -3618,6 +3618,8 @@ MonoBehaviour:
   menuLevelNumber: 0
   creditsLevelNumber: 3
   scoreMultiplier: 10
+  musicVolume: .5
+  soundVolume: 1
   creditsMusic: {fileID: 2047954641}
   gameMusic: {fileID: 733141220}
   score: 0
@@ -4187,7 +4189,7 @@ Transform:
   m_LocalScale: {x: .5, y: .5, z: .100000001}
   m_Children: []
   m_Father: {fileID: 691401120}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!82 &2047954641
 AudioSource:
   m_ObjectHideFlags: 0
