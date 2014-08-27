@@ -99,23 +99,25 @@ public class GameManager : MonoBehaviour
 		Application.LoadLevel(menuLevelNumber);
 	}
 	void OnGUI() {
-
-		if(musicToggle)
+		if(Application.loadedLevelName == "Menu")
 		{
-			gameMusic.volume = musicVolume;
-			creditsMusic.volume = musicVolume;
-			musicToggleText = "Disable Music";
-		}
-		else
-		{
-			gameMusic.volume = 0;
-			creditsMusic.volume = 0;
-			musicToggleText = "Enable Music";
-		}
-		musicToggle = GUI.Toggle(new Rect(500, 150, 300, 30), musicToggle, musicToggleText);
+			if(musicToggle)
+			{
+				gameMusic.volume = musicVolume;
+				creditsMusic.volume = musicVolume;
+				musicToggleText = "Disable Music";
+			}
+			else
+			{
+				gameMusic.volume = 0;
+				creditsMusic.volume = 0;
+				musicToggleText = "Enable Music";
+			}
+			musicToggle = GUI.Toggle(new Rect(500, 160, 300, 30), musicToggle, musicToggleText);
 
-		musicVolume = GUI.HorizontalSlider(new Rect(500, 200, 300, 30), musicVolume, 0.0f, 1.0f);
-		GUI.Label(new Rect(590, 180, 300, 30),"Music Volume: "+(int)(musicVolume*100)+"%");
+			GUI.Label(new Rect(590, 185, 300, 30),"Music Volume: "+(int)(musicVolume*100)+"%");
+			musicVolume = GUI.HorizontalSlider(new Rect(500, 205, 300, 30), musicVolume, 0.0f, 1.0f);
+		}
 	}
 	void SaveHighScore()
 	{

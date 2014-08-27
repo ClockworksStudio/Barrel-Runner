@@ -110,7 +110,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 595577150}
-  m_Text: 'Special Thanks to
+  m_Text: 'Thanks for playing!
 
 '
   m_OffsetZ: 0

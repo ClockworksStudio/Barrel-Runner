@@ -53,7 +53,6 @@ public class PowerupScript : MonoBehaviour
 
 		if(coolDownTimer == coolDown && running)
 		{
-			Debug.Log("Resetting powerup");
 			running = false;
 		}
 		else if(coolDownTimer < coolDown && running)
@@ -65,7 +64,6 @@ public class PowerupScript : MonoBehaviour
 	{
 		deactivated = false;
 		activateSound.Play();
-		Debug.Log("Activated");
 		if(powerupType == powerupList.NoDamage)
 		{
 			PlayerManager.noDamage = true;
@@ -107,7 +105,6 @@ public class PowerupScript : MonoBehaviour
 	{
 		if (!running && coolDownTimer == coolDown)
 		{
-			Debug.Log("Touch detected on: "+gameObject.name, gameObject);
 			activated = true;
 		}
 	}
