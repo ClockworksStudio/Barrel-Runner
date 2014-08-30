@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if((Input.GetKeyDown("space") || PseudoInputOnTouch.Instance.jumpPressed) && onGround == true)
+		if((Input.GetKeyDown("space") || PseudoInput.Instance.jumpPressed) && onGround == true)
 		{
 			timer = 0;
 			Jump();
