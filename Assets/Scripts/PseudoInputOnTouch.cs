@@ -3,9 +3,34 @@ using System.Collections;
 
 public class PseudoInputOnTouch : MonoBehaviour
 {
-	//public enum PseudoInputDirecton {Left, Right}
-	//public PseudoInputDirecton direction;
+	public static PseudoInputOnTouch Instance
+	{
+		get
+		{
+			return _instance;
+		}
+	}
 	
+	private static PseudoInputOnTouch _instance;
+	
+	[HideInInspector]
+	public bool jumpPressed = false;
+	
+	void Start()
+	{
+		if(_instance != this)
+		{
+			if(_instance == null)
+			{
+				_instance = this;
+			}
+			else
+			{
+				Destroy(gameObject);
+			}
+		}
+		DontDestroyOnLoad(gameObject);
+	}
 	void OnTouchDown()
 	{
 		if(GameManager.Instance.gameover)
@@ -14,11 +39,11 @@ public class PseudoInputOnTouch : MonoBehaviour
 		}
 		else
 		{
-			PseudoInput.Instance.jumpPressed = true;
+			jumpPressed = true;
 		}
 	}
 	void OnTouchUp()
 	{
-		PseudoInput.Instance.jumpPressed = false;
+		jumpPressed = false;
 	}
 }

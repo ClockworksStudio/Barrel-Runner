@@ -1,43 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerManager : MonoBehaviour
 {
+	public List<string> deathList = new List<string>();
+	public Animator animator;
 	public GameObject explosion;
-	public float jumpSpeed = 300.0f;
 	static public bool noDamage = false;
-	static public bool onGround = true;
-
+	public static bool onGround = true;
+	public float timer = 0;
+	
 	// Update is called once per frame
 	void Update()
 	{
-		if((Input.GetKeyDown("space") || PseudoInput.Instance.jumpPressed) && onGround == true)
+		if((Input.GetKeyDown("space") || PseudoInputOnTouch.Instance.jumpPressed) && onGround == true)
 		{
+			timer = 0;
 			Jump();
+		}
+		if(!onGround)
+		{
+			timer += Time.deltaTime;
+			if(timer >= 1)
+			{
+				onGround = true;
+				animator.SetBool("onGround", true);
+			}
 		}
 	}
 	void Jump()
 	{
-		rigidbody.AddForce(Vector3.up * jumpSpeed);
 		onGround = false;
+		animator.SetBool("onGround", false);
 	}
 	void OnTriggerEnter(Collider other)
 	{
-		//Debug.Log ("Player Trigger: " + other.name);
-		if(other.name == "Ground")
+		foreach(string str in deathList)
 		{
-			onGround = true;
-		}
-		if(other.name == "Crayon(Clone)")
-		{
-			if(!noDamage)
+			if(other.name == str)
 			{
-				Instantiate(explosion, transform.position, Quaternion.identity);
-				Destroy(gameObject);
-				Destroy(other.gameObject);
-				GameManager.Instance.gameover = true;
+				if(!noDamage)
+				{
+					Instantiate(explosion, transform.position, Quaternion.identity);
+					Destroy(gameObject);
+					Destroy(other.transform.parent.gameObject);
+					GameManager.Instance.gameover = true;
+				}
+				break;
 			}
-			//Debug.Log("Player: You be dead!");
 		}
 	}
 }

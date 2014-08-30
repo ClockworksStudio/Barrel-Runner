@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
 	{    
 		foreach (Transform child in transform)     
 		{  
-			child.gameObject.SetActiveRecursively(active);   
+			child.gameObject.SetActive(active);   
 		}   
 	}
 }

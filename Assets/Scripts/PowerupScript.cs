@@ -67,7 +67,6 @@ public class PowerupScript : MonoBehaviour
 		if(powerupType == powerupList.NoDamage)
 		{
 			PlayerManager.noDamage = true;
-			PlayerManagerV2.noDamage = true;
 		}
 		else if(powerupType == powerupList.SpeedBooster)
 		{
@@ -88,7 +87,6 @@ public class PowerupScript : MonoBehaviour
 		if(powerupType == powerupList.NoDamage)
 		{
 			PlayerManager.noDamage = false;
-			PlayerManagerV2.noDamage = false;
 		}
 		else if(powerupType == powerupList.SpeedBooster)
 		{
