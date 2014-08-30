@@ -6,7 +6,7 @@ public class PseudoInputOnTouch : MonoBehaviour
 	//public enum PseudoInputDirecton {Left, Right}
 	//public PseudoInputDirecton direction;
 	
-	void Touched()
+	void OnTouchDown()
 	{
 		if(GameManager.Instance.gameover)
 		{
@@ -16,5 +16,9 @@ public class PseudoInputOnTouch : MonoBehaviour
 		{
 			PseudoInput.Instance.jumpPressed = true;
 		}
+	}
+	void OnTouchUp()
+	{
+		PseudoInput.Instance.jumpPressed = false;
 	}
 }

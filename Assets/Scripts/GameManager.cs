@@ -16,14 +16,15 @@ public class GameManager : MonoBehaviour
 	public int menuLevelNumber;
 	public int creditsLevelNumber;
 	public int scoreMultiplier = 1;
+	public Slider musicVolSlider;
 	public float musicVolume = 0.5f;
-	public float soundVolume = 1.0f;
+	//public float soundVolume = 1.0f;
 
 	public AudioSource creditsMusic;
 	public AudioSource gameMusic;
 
-	private bool musicToggle = true;
-	private string musicToggleText = "Disable Music";
+	//private bool musicToggle = true;
+	//private string musicToggleText = "Disable Music";
 	private List<int> highScores = new List<int>();
 	private static GameManager _instance;
 	public static float highScore = 0.0f;
@@ -75,6 +76,17 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if(Application.loadedLevelName == "Menu")
+		{
+			ShowChildren(true);
+			musicVolume = musicVolSlider.GetSliderPercent();
+			gameMusic.volume = musicVolume;
+			creditsMusic.volume = musicVolume;
+		}
+		else
+		{
+			ShowChildren(false);
+		}
 		if(Input.anyKeyDown && gameover)
 		{
 			RestartGame();
@@ -97,27 +109,6 @@ public class GameManager : MonoBehaviour
 		score = 0;
 		gameover = false;
 		Application.LoadLevel(menuLevelNumber);
-	}
-	void OnGUI() {
-		if(Application.loadedLevelName == "Menu")
-		{
-			if(musicToggle)
-			{
-				gameMusic.volume = musicVolume;
-				creditsMusic.volume = musicVolume;
-				musicToggleText = "Disable Music";
-			}
-			else
-			{
-				gameMusic.volume = 0;
-				creditsMusic.volume = 0;
-				musicToggleText = "Enable Music";
-			}
-			musicToggle = GUI.Toggle(new Rect(500, 160, 300, 30), musicToggle, musicToggleText);
-
-			GUI.Label(new Rect(590, 185, 300, 30),"Music Volume: "+(int)(musicVolume*100)+"%");
-			musicVolume = GUI.HorizontalSlider(new Rect(500, 205, 300, 30), musicVolume, 0.0f, 1.0f);
-		}
 	}
 	void SaveHighScore()
 	{
@@ -160,5 +151,12 @@ public class GameManager : MonoBehaviour
 		}
 		
 		highScore = PlayerPrefs.GetInt("HighScore0");
+	}
+	public void ShowChildren(bool active)  
+	{    
+		foreach (Transform child in transform)     
+		{  
+			child.gameObject.SetActiveRecursively(active);   
+		}   
 	}
 }

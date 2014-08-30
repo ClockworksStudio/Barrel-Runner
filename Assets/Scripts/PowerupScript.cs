@@ -101,7 +101,7 @@ public class PowerupScript : MonoBehaviour
 			Debug.LogError("Powerup type not defined on object '"+gameObject.name+"'", gameObject);
 		}
 	}
-	void Touched()
+	void OnTouchDown()
 	{
 		if (!running && coolDownTimer == coolDown)
 		{

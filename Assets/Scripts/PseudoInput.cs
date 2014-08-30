@@ -33,8 +33,8 @@ public class PseudoInput : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void LateUpdate()
-	{
-		jumpPressed = false;
-	}
+//	void LateUpdate()
+//	{
+//		jumpPressed = false;
+//	}
 }
