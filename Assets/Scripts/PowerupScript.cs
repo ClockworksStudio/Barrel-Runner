@@ -83,7 +83,6 @@ public class PowerupScript : MonoBehaviour
 	{
 		deactivated = true;
 		deactivateSound.Play();
-		Debug.Log("Deactivated");
 		if(powerupType == powerupList.NoDamage)
 		{
 			PlayerManager.noDamage = false;
@@ -99,7 +98,7 @@ public class PowerupScript : MonoBehaviour
 			Debug.LogError("Powerup type not defined on object '"+gameObject.name+"'", gameObject);
 		}
 	}
-	void OnTouchDown()
+	void OnButtonClick()
 	{
 		if (!running && coolDownTimer == coolDown)
 		{

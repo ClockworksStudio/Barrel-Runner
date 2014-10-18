@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ShowScore : MonoBehaviour
 {
 	private string label;
-	private TextMesh textMesh;
+	private Text uiText;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		textMesh = GetComponent<TextMesh>();
-		label = textMesh.text;
+		uiText = GetComponent<Text>();
+		label = uiText.text;
 	}
 	
 	void Update()
 	{
-		textMesh.text = label + (int)GameManager.Instance.score;
+		uiText.text = label + (int)GameManager.Instance.score;
 	}
 }

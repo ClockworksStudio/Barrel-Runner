@@ -11,7 +11,7 @@ public class ButtonScript : MonoBehaviour
 	public string creditsLevel;
 	public string menuLevel;
 
-	void OnTouchDown()
+	void OnButtonClick()
 	{
 		if(buttonType == ButtonType.Play)
 		{

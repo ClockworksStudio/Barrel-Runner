@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
 	public int menuLevelNumber;
 	public int creditsLevelNumber;
 	public int scoreMultiplier = 1;
-	public Slider musicVolSlider;
-	public float musicVolume = 0.5f;
 	//public float soundVolume = 1.0f;
 
 	public AudioSource creditsMusic;
@@ -79,9 +77,6 @@ public class GameManager : MonoBehaviour
 		if(Application.loadedLevelName == "Menu")
 		{
 			ShowChildren(true);
-			musicVolume = musicVolSlider.GetSliderPercent();
-			gameMusic.volume = musicVolume;
-			creditsMusic.volume = musicVolume;
 		}
 		else
 		{
